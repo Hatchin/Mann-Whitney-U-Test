@@ -4,8 +4,11 @@ A web application for mann whitney test made with Python and Flask. Add solution
 
 ## Versions
 Flask==0.12.2
+
 Pandas==0.21.1
+
 Numpy==1.14.3
+
 Scipy=1.1.0 
 
 ## Installation
