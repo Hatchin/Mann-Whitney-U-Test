@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mann Whitney Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+      .container {
+        max-width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-sm-offset-1">
+              <h1>Mann Whitney Test</h1>
+              <br>
+
+
+              <form role="form" method="POST" action="/">
+                <div class="form-group">
+                    Data 1: <input type="text" name="data1" class="form-control" id="data1-box" placeholder="Enter Data1..." style="max-width: 300px;" autofocus required><br>
+                    Data 2: <input type="text" name="data2" class="form-control" id="data2-box" placeholder="Enter Data2..." style="max-width: 300px;" autofocus required><br>
+                </div>
+                Tail: <select name="tail">
+                        <option value="two">two tailed test</option>
+                        <option value="less">one tailed test - lower</option>
+                        <option value="more">one tailed test - larger</option>
+                        
+                      </select><br><br>
+                Significant Level: <select name="significance">
+                        <option value="0.05">0.05</option>
+                        <option value="0.1">0.1</option>
+                        
+                      </select><br><br>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+              <br>
+              {% for error in errors %}
+                <h4>{{ error }}</h4>
+              {% endfor %}
+              <br>
+              <h4>Data Input:</h4>
+              {% for d in Datas %}
+                <h5>{{ d }}</h5>
+              {% endfor %}
+              <br>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+              {% if results %}
+                <h2>Test Result</h2>
+                <h5>{{Tails}} Test at &alpha; = {{Sig_level}}</h5>
+                <br>
+                <div id="results">
+                  <table class="table table-striped" style="max-width: 300px;">
+                    <thead>
+                      <tr>
+                        <th>Item</th>
+                        <th>Value</th>
+                      </tr>
+                    </thead>
+                    {% for result in results%}
+                      <tr>
+                        <td>{{ result[0] }}</td>
+                        <td>{{ result[1] }}</td>
+                      </tr>
+                    {% endfor %}
+                  </table>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
