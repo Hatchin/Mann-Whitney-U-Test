@@ -1,4 +1,4 @@
 Flask==0.12.2
-Pandas==0.21.1
-Numpy==1.14.3
+numpy>=1.9.2
 scipy>=0.15.1
+pandas>=0.19
