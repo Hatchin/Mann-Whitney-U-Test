@@ -93,8 +93,9 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
                 
         
     else:
-        sd = np.sqrt(T * n1 * n2 * (n1+n2+1) / 12.0)
         T = tiecorrect(ranked)
+        sd = np.sqrt(T * n1 * n2 * (n1+n2+1) / 12.0)
+        
         if T == 0:
             raise ValueError('All numbers are identical in mannwhitneyu')
         meanrank = n1*n2/2.0 + 0.5 
@@ -112,11 +113,11 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
             p = norm.sf(z)
         if p <= float(significant_level):
             if significant_level == '0.05':
-                return True,'large', n1, n2,u_05, stat_a, effect, larger
+                return True,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
             else:
-                return True,'large', n1, n2,u_1, stat_a, effect, larger
+                return True,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
         else:
             if significant_level == '0.05':
-                return False,'large', n1, n2,u_05, stat_a, effect, larger
+                return False,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
             else:
-                return False,'large', n1, n2,u_1, stat_a, effect, larger
+                return False,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
