@@ -22,12 +22,11 @@ https://mannwhitney.herokuapp.com/
 `Sample Stat`: U stat computed from the data samples
 
 `Effect Size`:  a value to measure how large the difference is between the two data groups. 
+Formula:
 
-$$
-EffectSize = 1 - \frac{2\times U_{stat}}{n1\times n2} 
-$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" title="EffectSize = 1 - \frac{2\times U_{stat}}{n1\times n2}" /></a>
 
-$<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" title="EffectSize = 1 - \frac{2\times U_{stat}}{n1\times n2}" /></a>$
+`Larger Group`: indicates which group has a higher value
 
 ## Versions
 Flask==0.12.2
