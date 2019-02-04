@@ -8,6 +8,23 @@ https://mannwhitney.herokuapp.com/
 
 ![demo](https://github.com/Hatchin/Mann-Whitney-Extension/blob/master/demo.png)
 
+## Explanation
+`Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level
+
+`Sample Size`: if n <= 20, then small sample size; else large sample size
+
+`n1`：the number of samples in group 1
+
+`n2`: the number of samples in group 2
+
+`U-critical` or `P Value`: when small sample size, display the U critical value at the significant level; when large sample size, display the P Value computed from U stat
+
+`Sample Stat`: U stat computed from the data samples
+
+`Effect Size`:  a value to measure how large the difference is between the two data groups. 
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" title="EffectSize = 1 - \frac{2\times U_{stat}}{n1\times n2}" /></a>
+
 ## Versions
 Flask==0.12.2
 
