@@ -24,11 +24,6 @@ def index():
             tailed = request.form['tail']
             signif = request.form['significance']
 
-            data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
-            data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
-            data = [(' ,').join(data1), (' ,').join(data2)]
-
-
             if tailed == 'two':
                 t_title = 'Two Tailed'
             elif tailed == 'less':
@@ -46,6 +41,11 @@ def index():
 
         try:
             show_sig, sample_siz, n1, n2,u_critical, u_stat, effect_siz, huger = outcomes
+            
+            data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
+            data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
+            data = ['Data 1 :\n\n' + (', ').join(data1), 'Data 2 :\n' + (', ').join(data2)]
+
             if show_sig:
                 s = 'Yes'
             else: s = 'No'
