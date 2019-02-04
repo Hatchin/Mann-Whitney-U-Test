@@ -24,6 +24,8 @@ def index():
             tailed = request.form['tail']
             signif = request.form['significance']
 
+            data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
+            data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
             data = [data1, data2]
 
 
