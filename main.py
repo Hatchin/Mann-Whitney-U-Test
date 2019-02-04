@@ -4,6 +4,7 @@ from scipy.stats import tiecorrect, rankdata, norm
 
 def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
     
+    # build the two tailed critical table for small sample size testing
     Critical_05 = pd.DataFrame({'2': [-1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 5.0, 5.0, 5.0, 5.0, 5.0, 6.0, 6.0, 6.0, 6.0, 7.0, 7.0] ,
                                 '3': [-1.0, -1.0, -1.0, 0.0, 1.0, 1.0, 2.0, 2.0, 3.0, 3.0, 4.0, 4.0, 5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 8.0, 8.0, 9.0, 9.0, 10.0, 10.0, 11.0, 11.0, 12.0, 13.0, 13.0, 14.0, 14.0, 15.0, 15.0, 16.0, 16.0, 17.0, 17.0, 18.0, 18.0] ,
                                 '4': [-1.0, -1.0, 0.0, 1.0, 2.0, 3.0, 4.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 11.0, 12.0, 13.0, 13.0, 15.0, 16.0, 17.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0, 31.0, 31.0] ,
@@ -45,18 +46,18 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
                                 '19': [4, 10, 17, 23, 30, 37, 44, 51, 58, 65, 72, 80, 87, 94, 101, 109, 116, 123, 130, 138, 145, 152, 160, 167, 174, 182, 189, 196, 204, 211, 218, 226, 233, 241, 248, 255, 263, 270, 278] ,
                                 '20': [4, 11, 18, 25, 32, 39, 47, 54, 62, 69, 77, 84, 92, 100, 107, 115, 123, 130, 138, 146, 154, 161, 169, 177, 185, 192, 200, 208, 216, 224, 231, 239, 247, 255, 263, 271, 278, 286, 294] })
 
-    
+    # Split the data input string -> list
     data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
     data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
     
+    # convert the datatype into float for stat test
     try:
         data1 = [float(i) for i in data1]
         data2 = [float(i) for i in data2]
     except ValueError: 
-        
         return "ERROR: There are non-numeric elements!"
 
-        
+    # Mann Whitney Test    
     x = np.asarray(data1)
     y = np.asarray(data2)
     n1 = len(x)
@@ -66,21 +67,27 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
     u1 = n1*n2 + (n1*(n1+1))/2.0 - np.sum(rankx, axis=0)  # calc U for x
     u2 = n1*n2 - u1  # remainder is U for y
     
+    # use the min(u1, u2) as u-stat
     if u1 <= u2:
         stat_a, larger = u1, 1
     else:
         stat_a, larger = u2, 2
-        
-    effect = 1 - (2*stat_a)/(n1*n2)
 
-        
-                
-    if 2<=min(n1, n2) <= 20 and 2 <= max(n1, n2) <= 40:
-        if tail != 'two':
+    # compute the effect size    
+    effect = 1 - (2*stat_a)/(n1*n2) 
+
+    # Mann-Whitney test    
+    if min(n1, n2) < 2:  # sample size too small - cannot do test
+        return 'Sorry, sample size is too small to test significance. Please collect more data...'
+
+    # Do test for small sample size            
+    elif 2<=min(n1, n2) <= 20 and 2 <= max(n1, n2) <= 40:
+        if tail != 'two':  # only have data for two tail testing
             return 'Sorry, sample size too small, only two-tailed test available...'
 
-        u_05 = Critical_05[str(min(n1, n2))][max(n1, n2)-2]
-        u_1 = Critical_1[str(min(n1, n2))][max(n1, n2)-2]
+        u_05 = Critical_05[str(min(n1, n2))][max(n1, n2)-2]  # u=critical at signif level .05
+        u_1 = Critical_1[str(min(n1, n2))][max(n1, n2)-2]  # u=critical at signif level .1
+
         if significant_level == '0.05'and stat_a <= u_05:
             return True,'small', n1, n2,u_05, stat_a, effect, larger
         elif significant_level == '0.1'and stat_a <= u_1:
@@ -91,7 +98,7 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
             return False, 'small', n1, n2,u_1, stat_a, effect, larger
             
                 
-        
+    # Do test for large sample size    
     else:
         T = tiecorrect(ranked)
         sd = np.sqrt(T * n1 * n2 * (n1+n2+1) / 12.0)
