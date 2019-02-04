@@ -113,11 +113,11 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
             p = norm.sf(z)
         if p <= float(significant_level):
             if significant_level == '0.05':
-                return True,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
+                return True,'large', n1, n2, p, stat_a, effect, larger
             else:
-                return True,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
+                return True,'large', n1, n2, p, stat_a, effect, larger
         else:
             if significant_level == '0.05':
-                return False,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
+                return False,'large', n1, n2, p, stat_a, effect, larger
             else:
-                return False,'large', n1, n2,'NULL (large sample)', stat_a, effect, larger
+                return False,'large', n1, n2, p, stat_a, effect, larger

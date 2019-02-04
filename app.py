@@ -47,7 +47,18 @@ def index():
             if show_sig:
                 s = 'Yes'
             else: s = 'No'
-            items_name = ['Sig Diff', 'Sample Size', 'n1', 'n2', 'U Critical', 'Sample Stat', 'Effect Size', 'Larger Group']
+            if sample_siz == 'small':
+                items_name = ['Sig Diff', 
+                              'Sample Size', 
+                              'n1', 'n2', 'U Critical', 
+                              'Sample Stat', 'Effect Size', 
+                              'Larger Group']
+            else:
+                items_name = ['Sig Diff', 
+                              'Sample Size', 
+                              'n1', 'n2', 'P Value', 
+                              'Sample Stat', 'Effect Size', 
+                              'Larger Group']
             out = [s, sample_siz, n1, n2,u_critical, u_stat, effect_siz, huger]
             results = zip(items_name, out)
         except:
