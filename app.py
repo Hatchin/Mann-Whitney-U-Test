@@ -26,7 +26,7 @@ def index():
 
             data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
             data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
-            data = [data1, data2]
+            data = [(' ,').join(data1), (' ,').join(data2)]
 
 
             if tailed == 'two':
