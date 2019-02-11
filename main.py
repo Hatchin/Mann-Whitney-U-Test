@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from scipy.stats import tiecorrect, rankdata, norm
 
+
+
 def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
     
     # build the two tailed critical table for small sample size testing
