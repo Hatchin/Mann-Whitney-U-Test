@@ -55,6 +55,26 @@
             </div>
             <div class="col-sm-5 col-sm-offset-1">
               {% if results %}
+                <h2>Data Summary</h2>
+                <div id="stat">
+                  <table class="table table-striped" style="max-width: 300px;">
+                    <thead>
+                      <tr>
+                        <th> </th>
+                        <th>Data 1</th>
+                        <th>Data 2</th>
+                      </tr>
+                    </thead>
+                    {% for s in Stats%}
+                      <tr>
+                        <td>{{ s[0] }}</td>
+                        <td>{{ s[1] }}</td>
+                        <td>{{ s[2] }}</td>
+                      </tr>
+                    {% endfor %}
+                  </table>
+                </div>
+                <br>
                 <h2>Test Result</h2>
                 <h5>{{Tails}} Test at &alpha; = {{Sig_level}}</h5>
                 <br>

@@ -2,6 +2,7 @@ import os
 import requests
 from flask import Flask, render_template, request
 from main import *
+import numpy as np
 
 
 app = Flask(__name__)
@@ -12,6 +13,7 @@ def index():
     errors = []
     results = {}
     data = ''
+    s1, s2 = [], []
     t_title = ''
     signif = ''
 
@@ -40,11 +42,16 @@ def index():
         outcomes = mann_whitney(data1, data2, tail=tailed, significant_level=signif)
 
         try:
-            show_sig, sample_siz, n1, n2,u_critical, u_stat, effect_siz, huger = outcomes
+            # True,'small', n1, n2,u_05, stat_a, effect, larger, data1, data2
+            show_sig, sample_siz, n1, n2,u_critical, u_stat, effect_siz, huger, d1, d2 = outcomes
             
-            data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
-            data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
-            data = ['Data 1 :\n\n' + (', ').join(data1), 'Data 2 :\n' + (', ').join(data2)]
+            # data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
+            # data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
+            data = ['Data 1 :\n\n' + (', ').join([str(d) for d in data1]), 'Data 2 :\n' + (', ').join([str(d) for d in data2])]
+        
+            stats = [('Sample Size', n1, n2),('Mean', round(np.mean(d1),3), round(np.mean(d2),3)), 
+                 ('Standard Deviation', round(np.std(d1), 3), round(np.std(d2),3)), ('Median', np.median(d1), np.median(d2))]
+
 
             if show_sig:
                 s = 'Yes'
@@ -52,23 +59,23 @@ def index():
             if sample_siz == 'small':
                 items_name = ['Sig Diff', 
                               'Sample Size', 
-                              'n1', 'n2', 'U Critical', 
+                              'U Critical', 
                               'Sample Stat', 'Effect Size', 
                               'Larger Group']
             else:
                 items_name = ['Sig Diff', 
                               'Sample Size', 
-                              'n1', 'n2', 'P Value', 
+                              'P Value', 
                               'Sample Stat', 'Effect Size', 
                               'Larger Group']
-            out = [s, sample_siz, n1, n2,u_critical, u_stat, effect_siz, huger]
+            out = [s, sample_siz, u_critical, u_stat, round(effect_siz, 3), huger]
             results = zip(items_name, out)
         except:
             errors.append(outcomes)
 
 
 
-    return render_template('index.html', errors=errors,Datas=data, Tails=t_title, Sig_level=signif, results=results)
+    return render_template('index.html', errors=errors,Datas=data,Stats=stats, Tails=t_title, Sig_level=signif, results=results)
 
 
 if __name__ == '__main__':
