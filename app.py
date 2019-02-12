@@ -47,7 +47,7 @@ def index():
             
             # data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
             # data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
-            data = ['Data 1 :\n\n' + (', ').join([str(d) for d in data1]), 'Data 2 :\n' + (', ').join([str(d) for d in data2])]
+            data = ['Data 1 :\n\n' + (', ').join([str(d) for d in d1]), 'Data 2 :\n' + (', ').join([str(d) for d in d2])]
         
             stats = [('Sample Size', n1, n2),('Mean', round(np.mean(d1),3), round(np.mean(d2),3)), 
                  ('Standard Deviation', round(np.std(d1), 3), round(np.std(d2),3)), ('Median', np.median(d1), np.median(d2))]
