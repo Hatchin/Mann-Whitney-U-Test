@@ -91,13 +91,13 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
         u_1 = Critical_1[str(min(n1, n2))][max(n1, n2)-2]  # u=critical at signif level .1
 
         if significant_level == '0.05'and stat_a <= u_05:
-            return True,'small', n1, n2,u_05, stat_a, effect, larger, data1, data2
+            return True,'Small', n1, n2,u_05, stat_a, effect, larger, data1, data2
         elif significant_level == '0.1'and stat_a <= u_1:
-            return True,'small', n1, n2,u_1, stat_a, effect, larger, data1, data2
+            return True,'Small', n1, n2,u_1, stat_a, effect, larger, data1, data2
         elif significant_level == '0.05':
-            return False, 'small', n1, n2,u_05, stat_a, effect, larger, data1, data2
+            return False, 'Small', n1, n2,u_05, stat_a, effect, larger, data1, data2
         else:
-            return False, 'small', n1, n2,u_1, stat_a, effect, larger, data1, data2
+            return False, 'Small', n1, n2,u_1, stat_a, effect, larger, data1, data2
             
                 
     # Do test for large sample size    
@@ -122,11 +122,11 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
             p = norm.sf(z)
         if p <= float(significant_level):
             if significant_level == '0.05':
-                return True,'large', n1, n2, p, stat_a, effect, larger, data1, data2
+                return True,'Large', n1, n2, p, stat_a, effect, larger, data1, data2
             else:
-                return True,'large', n1, n2, p, stat_a, effect, larger, data1, data2
+                return True,'Large', n1, n2, p, stat_a, effect, larger, data1, data2
         else:
             if significant_level == '0.05':
-                return False,'large', n1, n2, p, stat_a, effect, larger, data1, data2
+                return False,'Large', n1, n2, p, stat_a, effect, larger, data1, data2
             else:
-                return False,'large', n1, n2, p, stat_a, effect, larger, data1, data2
+                return False,'Large', n1, n2, p, stat_a, effect, larger, data1, data2
