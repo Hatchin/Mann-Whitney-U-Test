@@ -32,7 +32,7 @@ Formula:
 
 `Larger Group`: indicates which group has a higher value
 
-## Versions
+## Requirements
 Flask==0.12.2
 
 Pandas>=0.21.1
