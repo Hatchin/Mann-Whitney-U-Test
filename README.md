@@ -9,13 +9,16 @@ https://mannwhitney.herokuapp.com/
 ![demo](https://github.com/Hatchin/Mann-Whitney-Extension/blob/master/demo.png)
 
 ## Handbook
+
+### Data Summary
+
+Information summary for two groups of data, including sample size (number of data samples), mean, standard deviation and median for each group. 
+
+### Test Result
+
 `Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level
 
 `Sample Size`: if n <= 20, then small sample size; else large sample size
-
-`n1`：the number of samples in group 1
-
-`n2`: the number of samples in group 2
 
 `U-critical` or `P Value`: when small sample size, display the U critical value at the significant level; when large sample size, display the P Value computed from U stat
 
