@@ -9,6 +9,12 @@
         max-width: 1000px;
       }
     </style>
+    <script type="text/JavaScript">
+      function showMessage(){
+          var message = document.getElementById("message").value;
+          display_message.innerHTML= message;
+      }
+  </script>
   </head>
   <body>
         <div class="container">
@@ -20,8 +26,8 @@
 
               <form role="form" method="POST" action="/">
                 <div class="form-group">
-                    Data 1: <input type="text" name="data1" class="form-control" id="data1-box" placeholder="Enter Data1..." style="max-width: 300px;" autofocus required><br>
-                    Data 2: <input type="text" name="data2" class="form-control" id="data2-box" placeholder="Enter Data2..." style="max-width: 300px;" autofocus required><br>
+                    Data 1: <input type="text" name="data1" class="form-control" id="data1-box" placeholder="Enter Data1..." style="max-width: 300px;" value="{{ request.form['data1'] }}" autofocus required><br>
+                    Data 2: <input type="text" name="data2" class="form-control" id="data2-box" placeholder="Enter Data2..." style="max-width: 300px;" value="{{ request.form['data2'] }}" autofocus required><br>
                 </div>
                 Tail: <select name="tail">
                         <option value="two">two tailed test</option>
