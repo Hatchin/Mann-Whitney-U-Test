@@ -8,7 +8,7 @@ https://mannwhitney.herokuapp.com/
 
 ![demo](https://github.com/Hatchin/Mann-Whitney-Extension/blob/master/demo.png)
 
-## Explanation
+## Handbook
 `Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level
 
 `Sample Size`: if n <= 20, then small sample size; else large sample size
