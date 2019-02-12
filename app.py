@@ -13,7 +13,7 @@ def index():
     errors = []
     results = {}
     data = ''
-    s1, s2 = [], []
+    stats= []
     t_title = ''
     signif = ''
 
