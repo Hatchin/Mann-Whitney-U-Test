@@ -57,13 +57,13 @@ def index():
                 s = 'Yes'
             else: s = 'No'
             if sample_siz == 'small':
-                items_name = ['Sig Diff', 
+                items_name = ['Significance', 
                               'Sample Size', 
                               'U Critical', 
                               'Sample Stat', 'Effect Size', 
                               'Larger Group']
             else:
-                items_name = ['Sig Diff', 
+                items_name = ['Significance', 
                               'Sample Size', 
                               'P Value', 
                               'Sample Stat', 'Effect Size', 
