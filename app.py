@@ -68,6 +68,7 @@ def index():
                               'P Value', 
                               'Sample Stat', 'Effect Size', 
                               'Larger Group']
+                u_stat = round(u_stat, 4)
             out = [s, sample_siz, u_critical, u_stat, round(effect_siz, 3), huger]
             results = zip(items_name, out)
         except:
