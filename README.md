@@ -14,7 +14,7 @@ https://mannwhitney.herokuapp.com/
 
 ### Data Summary
 
-Information summary for two groups of data, including sample size (number of data samples), mean, standard deviation and median for each group. 
+Information summary for two groups of data, including sample size (number of data samples), mean, standard deviation and median for each group.    
 
 ### Test Result
 
