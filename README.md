@@ -1,6 +1,6 @@
 # Mann-Whitney Web App
 
-Update 2/27/2019
+-- Update 2/27/2019
 
 The Mann-Whitney U test is a non-parametric test for testing whether two independent data samples come from the same distribution.
 
