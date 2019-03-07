@@ -56,7 +56,7 @@ def index():
             if show_sig:
                 s = 'Yes'
             else: s = 'No'
-            if sample_siz == 'small':
+            if sample_siz == 'Small':
                 items_name = ['Significance', 
                               'Sample Size', 
                               'U Critical', 
