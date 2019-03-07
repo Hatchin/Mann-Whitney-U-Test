@@ -1,8 +1,11 @@
 # Mann-Whitney Web App
 
+-- Update 2/27/2019
+
 The Mann-Whitney U test is a non-parametric test for testing whether two independent data samples come from the same distribution.
 
 This is a web application for Mann-Whitney U test made with Python and Flask. Add solution to test for small sample size (n < 20).
+
 
 ## Demo
 https://mannwhitney.herokuapp.com/
