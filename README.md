@@ -39,11 +39,14 @@ Formula:
 
 ### Interpretation
 1. Determine whether or not `Sample Size` is small
-   1. Item 3a
-   1. Item 3b
-⋅⋅⋅ if n <20 ,then `Small` size;
-⋅⋅⋅ else then `Large` size
-2. When sample size is small, compare `U-critical` and `Sample Stat` : if `U-critical` < `Sample Stat`, then 
+   1. if n <20 ,then `Small` size, continue to step 2;
+   2. else, then `Large` size, continue to step 3
+2. If sample size is `Small`, compare `U-critical` and `Sample Stat` : 
+   1. if `U-critical` < `Sample Stat`, then there is significant difference (`Sig Diff` = `Yes`), continue to step 4;
+   2. else, there is no signifcant difference (`Sig Diff` = `Yes`), end
+3. If sample size is `Large`, compare `P value` and \alpha : 
+   1. if `U-critical` < `Sample Stat`, then there is significant difference (`Sig Diff` = `Yes`), continue to step 4;
+   2. else, there is no signifcant difference (`Sig Diff` = `Yes`), end
 
 
 ## Requirements
