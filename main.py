@@ -49,8 +49,8 @@ def mann_whitney(data1, data2, tail = 'two', significant_level='0.05'):
                                 '20': [4, 11, 18, 25, 32, 39, 47, 54, 62, 69, 77, 84, 92, 100, 107, 115, 123, 130, 138, 146, 154, 161, 169, 177, 185, 192, 200, 208, 216, 224, 231, 239, 247, 255, 263, 271, 278, 286, 294] })
 
     # Split the data input string -> list
-    data1 = [a for i in data1.split(',') for a in i.split(' ') if len(a)>0]
-    data2 = [a for i in data2.split(',') for a in i.split(' ') if len(a)>0]
+    data1 = [b for i in data1.split(',') for a in i.split(' ') for b in a.split('\t') if len(b)>0]
+    data2 = [b for i in data2.split(',') for a in i.split(' ') for b in a.split('\t') if len(b)>0]
     
     # convert the datatype into float for stat test
     try:
