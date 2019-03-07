@@ -47,7 +47,7 @@ Formula:
 3. If sample size is `Large`, compare `P value` and $\alpha$ : 
    1. if `U-critical` < `Sample Stat`, then there is significant difference (`Sig Diff` = `Yes`), continue to step 4;
    2. else, there is no signifcant difference (`Sig Diff` = `Yes`), end
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>
 
 ## Requirements
 Flask==0.12.2
