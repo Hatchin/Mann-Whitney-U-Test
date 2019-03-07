@@ -41,9 +41,10 @@ Formula:
 1. Determine whether or not `Sample Size` is small
    1. if n <20 ,then `Small` size, continue to step 2;
    2. else, then `Large` size, continue to step 3
-2. If sample size is `Small`, compare `U-critical` and `Sample Stat` : 
-   1. if `U-critical` < `Sample Stat`, then there is significant difference (`Sig Diff` = `Yes`), continue to step 4;
-   2. else, there is no signifcant difference (`Sig Diff` = `Yes`), end
+2. Determine whether or not there is significant difference
+   1. If sample size is `Small`, compare `U-critical` and `Sample Stat` : 
+      1. if `U-critical` < `Sample Stat`, then there is significant difference (`Sig Diff` = `Yes`), continue to step 4;
+      2. else, there is no signifcant difference (`Sig Diff` = `Yes`), end
 3. If sample size is `Large`, compare `P value` and <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a> : 
    1. if `P value` < <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, then there is significant difference (`Sig Diff` = `Yes`), continue to step 4;
    2. else, there is no signifcant difference (`Sig Diff` = `Yes`), end
