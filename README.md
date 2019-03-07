@@ -47,6 +47,7 @@ Formula:
       1. if `P value` < <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, then there is significant difference (`Sig Diff` = `Yes`);
       2. else, there is no signifcant difference (`Sig Diff` = `No`), end
   3. If there is significant difference (`Sig Diff` = `Yes`), `Effect Size` will explain how the large the difference is. The larger `Effect Size`is, the huger difference is. `Larger Group` explicitly indicate the larger group. 
+  
 
 
 ## Requirements
