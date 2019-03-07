@@ -49,7 +49,6 @@ Formula:
   3. If there is significant difference (`Sig Diff` = `Yes`), `Effect Size` will explain how the large the difference is. The larger `Effect Size`is, the huger difference is. `Larger Group` explicitly indicate the larger group. 
   
 
-
 ## Requirements
 Flask==0.12.2
 
