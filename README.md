@@ -13,7 +13,7 @@ https://mannwhitney.herokuapp.com/
 
 ![demo](https://github.com/Hatchin/Mann-Whitney-Extension/blob/master/demo.png)
 
-## Handbook
+## Guide
 
 ### Data Summary
 
@@ -21,7 +21,7 @@ Information summary for two groups of data, including sample size (number of dat
 
 ### Test Result
 
-`Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level (determination: if U-critical/P_value < Sample Stat, then difference significant; else difference not significant) 
+`Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level
 
 `Sample Size`: if n <= 20, then small sample size; else large sample size
 
@@ -36,6 +36,11 @@ Formula:
 <a href="https://www.codecogs.com/eqnedit.php?latex=\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\fn_phv&space;EffectSize&space;=&space;1&space;-&space;\frac{2\times&space;U_{stat}}{n1\times&space;n2}" title="EffectSize = 1 - \frac{2\times U_{stat}}{n1\times n2}" /></a>
 
 `Larger Group`: indicates which group has a higher value
+
+### Interpretation
+- 1. Determine whether or not `Sample Size` is small 
+When sample size is small, compare `U-critical` and `Sample Stat` : if `U-critical` < `Sample Stat`, then 
+
 
 ## Requirements
 Flask==0.12.2
