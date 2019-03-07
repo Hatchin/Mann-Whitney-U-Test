@@ -21,11 +21,11 @@ Information summary for two groups of data, including sample size (number of dat
 
 ### Test Result
 
-`Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level
+`Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level (determination: if U-critical/P_value < Sample Stat, then difference significant; else difference not significant) 
 
 `Sample Size`: if n <= 20, then small sample size; else large sample size
 
-`U-critical` or `P Value`: when small sample size, display the U critical value at the significant level; when large sample size, display the P Value computed from U stat
+`U-critical` or `P Value`: when small sample size, return the U critical value at the significant level; when large sample size, return the P Value computed from U stat
 
 `Sample Stat`: U stat computed from the data samples
 
