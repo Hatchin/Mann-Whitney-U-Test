@@ -19,9 +19,9 @@ Information summary for two groups of data, including sample size (number of dat
 
 ### Test Result
 
-`Sig Diff`: whether or not the two sample data are from different distribution at the custom significant level
+`Sig Diff`: whether or not the two sample data are from different distribution at the user-defined significant level
 
-`Sample Size`: if n <= 20, then small sample size; else large sample size
+`Sample Size`: if n <= 20, then small sample size; else, large sample size
 
 `U-critical` or `P Value`: when small sample size, return the U critical value at the significant level; when large sample size, return the P Value computed from U stat
 
@@ -41,7 +41,7 @@ Formula:
    2. else, then `Large` size
 2. Determine whether or not there is significant difference
    1. If sample size is `Small`, compare `U-critical` and `Sample Stat` : 
-      1. if `U-critical` < `Sample Stat`, then there is significant difference (`Sig Diff` = `Yes`);
+      1. if `U-critical` > `Sample Stat`, then there is significant difference (`Sig Diff` = `Yes`);
       2. else, there is no signifcant difference (`Sig Diff` = `No`), end
    2. If sample size is `Large`, compare `P value` and <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a> : 
       1. if `P value` < <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\alpha" title="\alpha" /></a>, then there is significant difference (`Sig Diff` = `Yes`);
