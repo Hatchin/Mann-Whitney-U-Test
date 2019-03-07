@@ -38,8 +38,10 @@ Formula:
 `Larger Group`: indicates which group has a higher value
 
 ### Interpretation
-1. Determine whether or not `Sample Size` is small 
-When sample size is small, compare `U-critical` and `Sample Stat` : if `U-critical` < `Sample Stat`, then 
+1. Determine whether or not `Sample Size` is small
+  - if n <20 ,then `Small` size;
+  - else then `Large` size
+2. When sample size is small, compare `U-critical` and `Sample Stat` : if `U-critical` < `Sample Stat`, then 
 
 
 ## Requirements
