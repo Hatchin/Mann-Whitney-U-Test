@@ -4,20 +4,29 @@ The Mann-Whitney U test is a non-parametric test for testing whether two indepen
 
 This is a web application for Mann-Whitney U test made with Python and Flask. Add solution to test for small sample size (n < 20).
 
+## Table of Contents
+[Demo](#Demo)
+[Guide](#user-guide)
 
-## Demo
+1.    [Data Summary](#1.)  
+2.    [Test Result](#2.)   
+3.    [Interpretation](#3.)  
+[Installation](#install)
+
+## Demo <a class ="anchor" id="Demo"></a>
+
 https://mannwhitney.herokuapp.com/
 
 
 ![demo](https://github.com/Hatchin/Mann-Whitney-Extension/blob/master/demo.png)
 
-## Guide
+## Guide <a class ="anchor" id="user-guide"></a>
 
-### Data Summary
+### Data Summary <a class ="anchor" id="1."></a>
 
 Information summary for two groups of data, including sample size (number of data samples), mean, standard deviation and median for each group.    
 
-### Test Result
+### Test Result <a class ="anchor" id="2."></a>
 
 `Sig Diff`: whether or not the two sample data are from different distribution at the user-defined significant level
 
@@ -35,7 +44,7 @@ Formula:
 
 `Larger Group`: indicates which group has a higher value
 
-### Interpretation
+### Interpretation <a class ="anchor" id="3."></a>
 1. Determine whether or not `Sample Size` is small
    1. if n <20 ,then `Small` size;
    2. else, then `Large` size
@@ -50,7 +59,7 @@ Formula:
   
 
 
-## Installation
+## Installation <a class ="anchor" id="install"></a>
 Change to app directory, use `virtualenv` create and activate virtual enviroment.  
 Then use `pip` to install requirements：  
 ```
