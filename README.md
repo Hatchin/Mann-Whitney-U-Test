@@ -49,16 +49,6 @@ Formula:
   3. If there is significant difference (`Sig Diff` = `Yes`), `Effect Size` will explain how the large the difference is. The larger `Effect Size`is, the huger difference is. `Larger Group` explicitly indicate the larger group. 
   
 
-## Requirements
-Flask==0.12.2
-
-Pandas>=0.21.1
-
-Numpy>=1.14.3
-
-Scipy>=1.1.0
-
-Request>=2.7.0
 
 ## Installation
 Change to app directory, use `virtualenv` create and activate virtual enviroment.  
