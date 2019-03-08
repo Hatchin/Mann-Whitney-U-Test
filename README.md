@@ -5,15 +5,15 @@ The Mann-Whitney U test is a non-parametric test for testing whether two indepen
 This is a web application for Mann-Whitney U test made with Python and Flask. Add solution to test for small sample size (n < 20).
 
 ## Table of Contents
-[Demo](#Demo)
+1.    [Demo](#Demo)
 
-[Guide](#user-guide)
+2.    [Guide](#user-guide)
 
-1.    [Data Summary](#1.)  
-2.    [Test Result](#2.)   
-3.    [Interpretation](#3.) 
+      1.    [Data Summary](#1.)  
+      2.    [Test Result](#2.)   
+      3.    [Interpretation](#3.) 
 
-[Installation](#install)
+3.    [Installation](#install)
 
 ## Demo <a class ="anchor" id="Demo"></a>
 
