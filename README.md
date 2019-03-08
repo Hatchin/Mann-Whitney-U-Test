@@ -15,14 +15,14 @@ This is a web application for Mann-Whitney U test made with Python and Flask. Ad
 
 3.    [Installation](#install)
 
-## Demo <a class ="anchor" id="Demo"></a>
+## 1. Demo <a class ="anchor" id="Demo"></a>
 
 https://mannwhitney.herokuapp.com/
 
 
 ![demo](https://github.com/Hatchin/Mann-Whitney-Extension/blob/master/demo.png)
 
-## Guide <a class ="anchor" id="user-guide"></a>
+## 2. Guide <a class ="anchor" id="user-guide"></a>
 
 ### Data Summary <a class ="anchor" id="1."></a>
 
@@ -61,7 +61,7 @@ Formula:
   
 
 
-## Installation <a class ="anchor" id="install"></a>
+## 3. Installation <a class ="anchor" id="install"></a>
 Change to app directory, use `virtualenv` create and activate virtual enviroment.  
 Then use `pip` to install requirements：  
 ```
