@@ -6,11 +6,13 @@ This is a web application for Mann-Whitney U test made with Python and Flask. Ad
 
 ## Table of Contents
 [Demo](#Demo)
+
 [Guide](#user-guide)
 
 1.    [Data Summary](#1.)  
 2.    [Test Result](#2.)   
-3.    [Interpretation](#3.)  
+3.    [Interpretation](#3.) 
+
 [Installation](#install)
 
 ## Demo <a class ="anchor" id="Demo"></a>
