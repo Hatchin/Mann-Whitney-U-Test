@@ -1,7 +1,7 @@
 # Mann-Whitney Web App
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Hatchin/Mann-Whitney-U-Test/issues)
-[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Hatchin/Mann-Whitney-U-Test/blob/master/LICENSE)
 
 --------------------------------------------------------------------------------------
       
