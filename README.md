@@ -68,9 +68,9 @@ Formula:
 ## 3. Installation <a class ="anchor" id="install"></a>
 Change to app directory, use `virtualenv` create and activate virtual enviroment.  
 Then use `pip` to install requirements：  
-```
-pip install -r requirements.txt
-```
+
+      pip install -r requirements.txt
+
 Run:  
 ```
 python app.py runserver
