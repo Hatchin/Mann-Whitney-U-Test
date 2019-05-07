@@ -66,6 +66,24 @@ Formula:
 
 
 ## 3. Installation <a class ="anchor" id="install"></a>
+
+This repo contains files for two type of installations, launching a Web Application and Python source code for directly use. You could choose based on your preference. 
+
+    .   # Web App Files
+    ├── templates               # HTML files for web pages
+    ├── app.py                  # Flask launching file
+    ├── main.py                 # Scripts of extended Mann Whitney Test
+        
+        # Python source code for directly use
+    ├── mannwhitney.py          # Class of extended Mann Whitney Test
+     
+        # Basic files
+    ├── requirements.txt         # Required package info
+    ├── LICENSE
+    └── README.md
+    
+    
+### 3.1 Launch a Web App
 Change to app directory, use `virtualenv` create and activate virtual enviroment.  
 Then use `pip` to install requirements：  
 
@@ -79,5 +97,7 @@ python app.py runserver
 
 Go to http://127.0.0.1:5000/
 
+### 3.2 Use Source Code directly
+Download and import `mannwhitney.py`.
 
 
