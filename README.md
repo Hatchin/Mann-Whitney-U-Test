@@ -24,6 +24,8 @@ This is a web application for Mann-Whitney U test made with Python and Flask. Ad
 
 https://mannwhitney.herokuapp.com/
 
+This First time opening will take few time.
+
 ![demo](https://github.com/Hatchin/Mann-Whitney-Extension/blob/master/demo.png)
 
 ## 2. Guide <a class ="anchor" id="user-guide"></a>
