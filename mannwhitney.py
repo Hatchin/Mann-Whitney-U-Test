@@ -107,7 +107,6 @@ class mannWhitney():
                 self.effectsize = effect
                 self.largergroup = larger
             elif significant_level == 0.1 and stat_a <= u_1:
-                return True,'Small', n1, n2,u_1, stat_a, effect, larger, data1, data2
                 self.significance = True
                 self.sample_size = 'Small'
                 self.n1 = n1
